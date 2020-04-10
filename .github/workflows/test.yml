@@ -1,0 +1,19 @@
+
+name: test-selfsigned-certs
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: run action 
+        uses: actions/action-create-certificate@v0.0.1
+        with:
+          hostcert: 'hostcert.pem'
+          hostkey:  'hostkey.pem'
+          cachain: 'ca-chain.pem'
+
+      - name: Output results
+        run: |
+            echo *
+            
