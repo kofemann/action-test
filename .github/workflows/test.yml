@@ -7,7 +7,7 @@ jobs:
 
     steps:
       - name: run action 
-        uses: kofemann/action-create-certificate@v0.0.2
+        uses: kofemann/action-create-certificate@latest
 
         with:
           hostcert: 'hostcert.pem'
