@@ -1,6 +1,10 @@
 
 name: test-selfsigned-certs
 on: [push]
+env:
+  DOCKER_REGISTRY_URL: docker.pkg.github.com
+  DOCKER_USERNAME: ${{ github.actor }}
+  DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
 jobs:
   build:
     runs-on: ubuntu-latest
