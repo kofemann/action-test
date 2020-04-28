@@ -14,6 +14,7 @@ jobs:
           DOCKER_USERNAME: ${{ github.actor }}
           DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
         with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           hostcert: 'hostcert.pem'
           hostkey:  'hostkey.pem'
           cachain: 'ca-chain.pem'
