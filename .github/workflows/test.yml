@@ -23,6 +23,6 @@ jobs:
         run: |
             echo *
             
-      - name: check with openssl
+      - name: check generated certificate with openssl
         run: |
             openssl x509 -in hostcert.pem -noout -text
