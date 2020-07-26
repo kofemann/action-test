@@ -15,6 +15,7 @@ jobs:
       - name: run action 
         uses: kofemann/action-create-certificate@master
         with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           hostcert: 'hostcert.pem'
           hostkey:  'hostkey.pem'
           cachain: 'ca-chain.pem'
